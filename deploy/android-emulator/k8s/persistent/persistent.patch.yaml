@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: android-emulator
+  namespace: android-testing
+spec:
+  template:
+    spec:
+      volumes:
+        - name: device-data
+          emptyDir: null
+          persistentVolumeClaim:
+            claimName: android-emulator-data

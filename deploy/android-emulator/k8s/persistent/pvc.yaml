@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: android-emulator-data
+  namespace: android-testing
+spec:
+  accessModes: [ReadWriteOnce]
+  # 使用集群默认 StorageClass；上线前确认它是云块存储 CSI。
+  # 如需指定：storageClassName: your-cloud-block-storage-class
+  resources:
+    requests:
+      storage: 30Gi

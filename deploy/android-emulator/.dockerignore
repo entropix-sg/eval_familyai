@@ -1,0 +1,7 @@
+**
+!Dockerfile
+!Dockerfile.base
+!start-emulator.sh
+!healthcheck.sh
+!app/
+!app/app.apk
